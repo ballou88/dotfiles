@@ -1,0 +1,65 @@
+" Let Vundle manage Vundle
+" required!
+Bundle 'gmarik/vundle'
+
+" My Bundles here:
+"
+" original repos on github
+
+" Colorschemes
+Bundle 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
+
+" General
+Bundle 'kien/ctrlp.vim'
+Bundle 'terryma/vim-multiple-cursors'
+Bundle 'spf13/vim-autoclose'
+Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-endwise'
+Bundle 'tsaleh/vim-matchit'
+Bundle 'vim-scripts/ctags.vim'
+Bundle 'vim-scripts/tComment'
+Bundle 'scrooloose/nerdcommenter'
+
+" Programming
+Bundle 'scrooloose/syntastic'
+Bundle 'airblade/vim-gitgutter'
+Bundle 'tpope/vim-fugitive'
+Bundle 'majutsushi/tagbar'
+Bundle 'godlygeek/tabular'
+
+" Snippets & AutoComplete
+Bundle 'Shougo/neocomplete.vim.git'
+Bundle 'Shougo/neosnippet'
+Bundle 'honza/vim-snippets'
+
+" PHP
+Bundle 'spf13/PIV'
+Bundle 'arnaud-lb/vim-php-namespace'
+
+" Python
+Bundle 'klen/python-mode'
+Bundle 'python.vim'
+Bundle 'python_match.vim'
+Bundle 'pythoncomplete'
+
+" Javascript
+Bundle 'elzr/vim-json'
+Bundle 'groenewege/vim-less'
+Bundle 'pangloss/vim-javascript'
+Bundle 'briancollins/vim-jst'
+Bundle 'kchmck/vim-coffee-script'
+
+" HTML
+Bundle 'amirh/HTML-AutoCloseTag'
+Bundle 'hai2u/vim-css3-syntax'
+Bundle 'tpope/vim-haml'
+
+" Ruby/Rails
+Bundle 'tpope/vim-rails.git'
+Bundle 'tpope/vim-bundler'
+Bundle 'thoughtbot/vim-rspec'
+
+" Misc
+Bundle 'tpope/vim-markdown'
+Bundle 'spf13/vim-preview'
+
