@@ -35,6 +35,7 @@ filetype plugin indent on
   " Use persistent undo if it is available
   if has('persistent_undo')
     set undofile            " Enable persistent undo
+    set undodir=~/.backup/undo/,~/tmp,.
     set undolevels=1000     " Maximum number of changes that can be undone
     set undoreload=10000    " Maximum number of lines to save for undo on a buffer reload
   endif
@@ -205,6 +206,7 @@ nnoremap <Down> :echoe "Use j"<CR>
 nnoremap <Leader>t :call RunCurrentSpecFile()<CR>
 nnoremap <Leader>s :call RunNearestSpec()<CR>
 nnoremap <Leader>l :call RunLastSpec()<CR>
+nnoremap <Leader>a :call RunAllSpecs()<CR>
 
 " Treat <li> and <p> tags like the block tags they are
 let g:html_indent_tags = 'li\|p'
