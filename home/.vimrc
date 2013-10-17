@@ -44,7 +44,7 @@ filetype plugin indent on
 
 " Vim UI {
 set background=dark   " Assume a dark background
-colorscheme Tomorrow-Night-Bright
+colorscheme base16-eighties
 syntax on
 set tabpagemax=15         " Only show 15 tabs
 set showmode              " Display the current mode
@@ -81,7 +81,7 @@ set wildmode=list:longest,full    " Command <tab> completion, list matches, then
 set whichwrap=b,s,h,l,<,>,[,]     " Backspace and cursor keys wrap too
 set scrolljump=5                  " Lines to scroll when cursor leaves screen
 set scrolloff=8                   " Minimum lines to keep above and below cursor
-set foldenable                    " Auto fold code
+"set foldenable                    " Auto fold code
 set list
 set listchars=tab:>\ ,trail:*,extends:#,nbsp:. " Highlight problematic whitespace
 " }
