@@ -404,11 +404,17 @@ set nocompatible " be iMproved
   " Git Gitgutter {{{
     let g:gitgutter_realtime = 0
   "}}}
+  " Ctrlp {{{
+    let g:ctrlp_by_filename = 1
+  "}}}
 "}}}
 
 " Syntax specfic {{{
   " Python {{{
     autocmd FileType python setlocal shiftwidth=5 tabstop=4 softtabstop=4
+  " }}}
+  " ZSH {{{
+    autocmd FileType ZSH setlocal foldmarker={{{,}}} foldmethod=marker foldenable
   " }}}
   " Vim {{{
     autocmd FileType vim setlocal foldmarker={{{,}}} foldlevel=9 foldmethod=marker
