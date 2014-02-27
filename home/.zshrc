@@ -1,7 +1,7 @@
 ZSH=$HOME/.oh-my-zsh
 
 # Set the default editor
-EDITOR=/usr/local/bin/vim
+export EDITOR=/usr/local/bin/vim
 
 # Customize theme {{{
   ZSH_THEME="powerline"
@@ -11,12 +11,13 @@ EDITOR=/usr/local/bin/vim
 # }}}
 
 # oh-my-zsh stuff {{{
-  plugins=(git brew bundler gitfast git-extras rails3 tmux tmuxinator urltools taskwarrior)
+  plugins=(git brew bundler gitfast git-extras rails urltools taskwarrior)
   source $ZSH/oh-my-zsh.sh
-  export PATH=/Users/mballou/.rbenv/shims:/usr/local/bin:/usr/local/sbin:/Users/mballou/.bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin
+  export PATH=/usr/local/bin:/usr/local/sbin:/Users/mballou/.bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin
 # }}}
 
 # Aliases {{{
+  alias vi2 -u ~/.vimrc2
   alias zshconfig="vi ~/.zshrc"
   alias bower='noglob bower'
   alias code='cd ~/code'
@@ -88,6 +89,8 @@ EDITOR=/usr/local/bin/vim
   alias gf='git ls-files | grep'
   alias gpoat='git push origin --all && git push origin --tags'
   alias acurl='curl -g -H "Pragma: akamai-x-cache-on, akamai-x-cache-remote-on, akamai-x-check-cacheable, akamai-x-get-cache-key, akamai-x-get-extracted-values, akamai-x-get-nonces, akamai-x-get-ssl-client-session-id, akamai-x-get-true-cache-key, akamai-x-serial-no" '
+  alias vim2='vim -u ~/.vimrc2'
+  alias gfd='git diff --name-only'
 
   # Will cd into the top of the current repository
   # or submodule.
@@ -97,6 +100,7 @@ EDITOR=/usr/local/bin/vim
 
 # Disable corrections
 unsetopt correct_all
-
-# Initialize rbEnv
+cd ..;cd -
+source ~/.bin/tmuxinator.zsh
+export TERM=xterm-256color
 eval "$(rbenv init -)"

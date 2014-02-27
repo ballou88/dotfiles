@@ -20,6 +20,7 @@ Bundle 'tsaleh/vim-matchit'
 Bundle 'vim-scripts/ctags.vim'
 Bundle 'vim-scripts/tComment'
 Bundle 'scrooloose/nerdcommenter'
+Bundle 'tpope/vim-dispatch'
 
 " Programming
 Bundle 'scrooloose/syntastic'
@@ -29,19 +30,20 @@ Bundle 'majutsushi/tagbar'
 Bundle 'godlygeek/tabular'
 
 " Snippets & AutoComplete
+"Bundle 'Valloric/YouCompleteMe'
 Bundle 'Shougo/neocomplete.vim.git'
 Bundle 'Shougo/neosnippet'
 Bundle 'honza/vim-snippets'
 
 " PHP
-Bundle 'spf13/PIV'
-Bundle 'arnaud-lb/vim-php-namespace'
+"Bundle 'spf13/PIV'
+"Bundle 'arnaud-lb/vim-php-namespace'
 
 " Python
-Bundle 'klen/python-mode'
-Bundle 'python.vim'
-Bundle 'python_match.vim'
-Bundle 'pythoncomplete'
+"Bundle 'klen/python-mode'
+"Bundle 'python.vim'
+"Bundle 'python_match.vim'
+"Bundle 'pythoncomplete'
 
 " Javascript
 Bundle 'elzr/vim-json'
@@ -49,10 +51,10 @@ Bundle 'groenewege/vim-less'
 Bundle 'pangloss/vim-javascript'
 Bundle 'briancollins/vim-jst'
 Bundle 'kchmck/vim-coffee-script'
+Bundle 'juvenn/mustache.vim'
 
 " HTML
 Bundle 'amirh/HTML-AutoCloseTag'
-Bundle 'hai2u/vim-css3-syntax'
 Bundle 'tpope/vim-haml'
 
 " Ruby/Rails

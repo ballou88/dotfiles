@@ -14,23 +14,31 @@
   pr = !hub pull-request
   rebase-origin = !git fetch origin && git rebase origin/master
   st = status
-	switch = !legit switch \"$@\"
-	branches = !legit branches
-	sprout = !legit sprout \"$@\"
-	unpublish = !legit unpublish \"$@\"
-	harvest = !legit harvest \"$@\"
-	sync = !legit sync \"$@\"
-	publish = !legit publish \"$@\"
-	graft = !legit graft \"$@\"
+  switch = !legit switch \"$@\"
+  branches = !legit branches
+  sprout = !legit sprout \"$@\"
+  unpublish = !legit unpublish \"$@\"
+  harvest = !legit harvest \"$@\"
+  sync = !legit sync \"$@\"
+  publish = !legit publish \"$@\"
+  graft = !legit graft \"$@\"
+  ignore = update-index --assume-unchanged
+  unignore = update-index --no-assume-unchanged
 [core]
-  excludesfile = ~/.gitignore
+	excludesfile = /Users/mballou/.gitignore
   autocrlf = input
 [user]
 	name = Mike Ballou
-	email = mikeballou@gmail.com
+	email = mballou@spokeo.com
 [difftool "Kaleidoscope"]
-	cmd = ksdiff-wrapper git \"$LOCAL\" \"$REMOTE\"
+  cmd = ksdiff-wrapper git \"$LOCAL\" \"$REMOTE\"
 [difftool]
-	prompt = false
+  prompt = false
 [diff]
-	tool = Kaleidoscope
+  tool = Kaleidoscope
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true

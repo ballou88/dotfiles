@@ -17,8 +17,6 @@ set nocompatible " be iMproved
   set foldmethod=syntax
 
   " Save folds when saving
-  autocmd BufWinLeave *.* mkview
-  autocmd BufWinEnter *.* silent loadview
   set mouse=a           " Automatically enable mouse usage
   set mousehide         " Hide the mouse cursor while typing
   set hidden            " Allow buffer switching without saving
@@ -123,6 +121,16 @@ set nocompatible " be iMproved
 
   " Search Ctrlp with Tags
   nnoremap <leader>. :CtrlPTag<cr>
+  nnoremap <leader>ts :ts<cr>
+  nnoremap <leader>tn :tn<cr>
+  nnoremap <leader>tp :tp<cr>
+  nnoremap <silent> <leader>b :TagbarToggle<cr>
+
+  nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
+
+  " bind \ (backward slash) to grep shortcut
+  command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
+  nnoremap \ :Ag<SPACE>
 
   " Yank from the cursor to the end of the line
   nnoremap Y y$
@@ -198,6 +206,7 @@ set nocompatible " be iMproved
   nnoremap <Down> :echoe "Use j"<CR>
 
   " vim-rspec mappings
+  let g:rspec_command = "Dispatch bundle exec rspec {spec}"
   nnoremap <Leader>rt :call RunCurrentSpecFile()<CR>
   nnoremap <Leader>rs :call RunNearestSpec()<CR>
   nnoremap <Leader>rl :call RunLastSpec()<CR>
@@ -406,13 +415,11 @@ set nocompatible " be iMproved
   "}}}
   " Ctrlp {{{
     let g:ctrlp_by_filename = 1
+
   "}}}
 "}}}
 
 " Syntax specfic {{{
-  " Python {{{
-    autocmd FileType python setlocal shiftwidth=5 tabstop=4 softtabstop=4
-  " }}}
   " ZSH {{{
     autocmd FileType ZSH setlocal foldmarker={{{,}}} foldmethod=marker foldenable
   " }}}
