@@ -1,7 +1,7 @@
 [push]
   default = upstream
 [color]
-  ui = auto
+	ui = true
 [alias]
   aa = add --all
   ap = add --patch

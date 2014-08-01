@@ -54,7 +54,7 @@ set nocompatible " be iMproved
 
 " Vim UI {{{
   set background=dark   " Assume a dark background
-  colorscheme base16-eighties
+  colorscheme Tomorrow-Night-Bright
   syntax on
   set tabpagemax=15         " Only show 15 tabs
   set showmode              " Display the current mode

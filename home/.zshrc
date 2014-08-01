@@ -4,7 +4,7 @@ ZSH=$HOME/.oh-my-zsh
 export EDITOR=/usr/local/bin/vim
 
 # Customize theme {{{
-  ZSH_THEME="powerline"
+  ZSH_THEME="bira"
   POWERLINE_HIDE_HOST_NAME="true"
   POWERLINE_DETECT_SSH="true"
   POWERLINE_FULL_CURRENT_PATH="true"
@@ -104,3 +104,18 @@ cd ..;cd -
 source ~/.bin/tmuxinator.zsh
 export TERM=xterm-256color
 eval "$(rbenv init -)"
+fpath=(/usr/local/share/zsh-completions $fpath)
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# Setup zsh-autosuggestions
+source ~/.zsh-autosuggestions/autosuggestions.zsh
+
+# Enable autosuggestions automatically
+zle-line-init() {
+    zle autosuggest-start
+}
+zle -N zle-line-init
+
+# use ctrl+t to toggle autosuggestions(hopefully this wont be needed as
+# zsh-autosuggestions is designed to be unobtrusive)
+bindkey '^T' autosuggest-toggle
