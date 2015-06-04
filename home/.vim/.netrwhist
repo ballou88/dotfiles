@@ -1,0 +1,11 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =9
+let g:netrw_dirhist_1='/Users/mballou/code/admin_central/app'
+let g:netrw_dirhist_2='/Users/mballou/code/admin_central/app/models'
+let g:netrw_dirhist_3='/Users/mballou/code/spokeo'
+let g:netrw_dirhist_4='/Users/mballou/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/activesupport-4.1.4'
+let g:netrw_dirhist_5='/Users/mballou/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/activesupport-4.1.4/lib'
+let g:netrw_dirhist_6='/Users/mballou/code/spokeo'
+let g:netrw_dirhist_7='/Users/mballou/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/activesupport-4.1.4'
+let g:netrw_dirhist_8='/Users/mballou/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/activesupport-4.1.4/lib'
+let g:netrw_dirhist_9='/Users/mballou/.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/activesupport-4.1.4/lib/active_support'

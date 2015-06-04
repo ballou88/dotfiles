@@ -1,30 +1,38 @@
-ZSH=$HOME/.oh-my-zsh
-
 # Set the default editor
 export EDITOR=/usr/local/bin/vim
 
-# Customize theme {{{
-  ZSH_THEME="bira"
-  POWERLINE_HIDE_HOST_NAME="true"
-  POWERLINE_DETECT_SSH="true"
-  POWERLINE_FULL_CURRENT_PATH="true"
-# }}}
+# Better history tracking for self analytics
+HISTFILE=$HOME/.zsh_history
+HISTSIZE=20000
+SAVEHIST=20000
+setopt append_history
+setopt extended_history
+# setopt hist_expire_dups_first
+# setopt hist_ignore_dups # ignore duplication command history list
+setopt hist_ignore_space
+setopt hist_verify
+setopt inc_append_history
+# setopt share_history # share command history data
 
-# oh-my-zsh stuff {{{
-  plugins=(git brew bundler gitfast git-extras rails urltools taskwarrior)
-  source $ZSH/oh-my-zsh.sh
-  export PATH=/usr/local/bin:/usr/local/sbin:/Users/mballou/.bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin
-# }}}
+export PATH=/usr/local/bin:/usr/local/sbin:/Users/mballou/.bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin
+
+fpath=(/usr/local/share/zsh-completions $fpath)
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# Setup zsh-autosuggestions
+source ~/.zsh-autosuggestions/autosuggestions.zsh
 
 # Aliases {{{
-  alias vi2 -u ~/.vimrc2
+  alias v='vi'
+  alias c='cd'
   alias zshconfig="vi ~/.zshrc"
   alias bower='noglob bower'
+  alias rake='noglob rake'
   alias code='cd ~/code'
   alias flush_dns="sudo killall -HUP mDNSResponder"
   alias reload="source ~/.zshrc"
-  alias be="bundle exec"
-  alias gst='git status'
+  alias be="noglob bundle exec"
+  alias gst='git status -s'
   compdef _git gst=git-status
   alias gd='git diff'
   compdef _git gd=git-diff
@@ -37,20 +45,20 @@ export EDITOR=/usr/local/bin/vim
   alias gd='git diff'
   gdv() { git diff -w "$@" | view - }
   compdef _git gdv=git-diff
-  alias gc='git commit -v'
+  alias gc='git commit'
   compdef _git gc=git-commit
-  alias gc!='git commit -v --amend'
+  alias gc!='git commit --amend'
   compdef _git gc!=git-commit
-  alias gca='git commit -v -a'
+  alias gca='git commit -am'
   compdef _git gc=git-commit
-  alias gca!='git commit -v -a --amend'
+  alias gca!='git commit -a --amend'
   compdef _git gca!=git-commit
   alias gco='git checkout'
   compdef _git gco=git-checkout
   alias gcm='git checkout master'
   alias gr='git remote'
   compdef _git gr=git-remote
-  alias grv='git remote -v'
+  alias grv='git remote'
   compdef _git grv=git-remote
   alias grmv='git remote rename'
   compdef _git grmv=git-remote
@@ -91,11 +99,18 @@ export EDITOR=/usr/local/bin/vim
   alias acurl='curl -g -H "Pragma: akamai-x-cache-on, akamai-x-cache-remote-on, akamai-x-check-cacheable, akamai-x-get-cache-key, akamai-x-get-extracted-values, akamai-x-get-nonces, akamai-x-get-ssl-client-session-id, akamai-x-get-true-cache-key, akamai-x-serial-no" '
   alias vim2='vim -u ~/.vimrc2'
   alias gfd='git diff --name-only'
+  alias iss='invoker start -d ~/stack.ini'
+  alias irt='invoker reload tunnels'
+  alias ira='invoker reload central-admin'
+  alias irs='invoker reload spokeo'
+  alias td='todo.sh'
 
   # Will cd into the top of the current repository
   # or submodule.
   alias grt='cd $(git rev-parse --show-toplevel || echo ".")'
   alias cat="coderay"
+
+  alias bs-tunnel='ssh -f beta-gateway.spokeo.com -L 3340:bbz-dba1:3306 -N'
 # }}}
 
 # Disable corrections
@@ -104,11 +119,6 @@ cd ..;cd -
 source ~/.bin/tmuxinator.zsh
 export TERM=xterm-256color
 eval "$(rbenv init -)"
-fpath=(/usr/local/share/zsh-completions $fpath)
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-# Setup zsh-autosuggestions
-source ~/.zsh-autosuggestions/autosuggestions.zsh
 
 # Enable autosuggestions automatically
 zle-line-init() {

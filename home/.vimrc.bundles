@@ -9,6 +9,7 @@ Bundle 'gmarik/vundle'
 " Colorschemes
 Bundle 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
 Bundle 'chriskempson/base16-vim'
+Bundle 'flazz/vim-colorschemes'
 
 " General
 Bundle 'kien/ctrlp.vim'
@@ -19,7 +20,12 @@ Bundle 'tpope/vim-endwise'
 Bundle 'vim-scripts/ctags.vim'
 Bundle 'vim-scripts/tComment'
 Bundle 'scrooloose/nerdcommenter'
-Bundle 'tpope/vim-dispatch'
+Bundle 'tpope/vim-obsession'
+"Bundle 'tpope/vim-dispatch'
+Bundle 'scrooloose/nerdtree'
+Bundle 'rking/ag.vim'
+Bundle 'christoomey/vim-tmux-navigator'
+"Bundle 'christoomey/vim-tmux-runner'
 
 " Programming
 Bundle 'scrooloose/syntastic'
@@ -27,16 +33,14 @@ Bundle 'airblade/vim-gitgutter'
 Bundle 'tpope/vim-fugitive'
 Bundle 'majutsushi/tagbar'
 Bundle 'godlygeek/tabular'
+Bundle 'tpope/vim-projectionist'
 
 " Snippets & AutoComplete
 "Bundle 'Valloric/YouCompleteMe'
 Bundle 'Shougo/neocomplete.vim.git'
 Bundle 'Shougo/neosnippet'
 Bundle 'honza/vim-snippets'
-
-" PHP
-"Bundle 'spf13/PIV'
-"Bundle 'arnaud-lb/vim-php-namespace'
+Bundle 'Shougo/neosnippet-snippets'
 
 " Python
 "Bundle 'klen/python-mode'
@@ -55,12 +59,19 @@ Bundle 'juvenn/mustache.vim'
 " HTML
 Bundle 'amirh/HTML-AutoCloseTag'
 Bundle 'tpope/vim-haml'
+Bundle 'slim-template/vim-slim.git'
 
 " Ruby/Rails
 Bundle 'tpope/vim-rails.git'
 Bundle 'tpope/vim-bundler'
 Bundle 'thoughtbot/vim-rspec'
-Bundle 'Keithbsmiley/rspec.vim'
+Bundle 'benmills/vimux'
+Bundle 'jgdavey/vim-turbux'
+Bundle 'tmux-plugins/vim-tmux-focus-events'
+"Bundle 'Keithbsmiley/rspec.vim'
+Bundle 'kana/vim-textobj-user'
+Bundle 'nelstrom/vim-textobj-rubyblock'
+
 " Misc
 Bundle 'tpope/vim-markdown'
 Bundle 'spf13/vim-preview'

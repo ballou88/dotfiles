@@ -15,6 +15,8 @@ set nocompatible " be iMproved
   filetype plugin indent on
   scriptencoding utf-8
   set foldmethod=syntax
+  " Automatically resize when window resizes
+  autocmd VimResized * :wincmd =
 
   " Save folds when saving
   set mouse=a           " Automatically enable mouse usage
@@ -40,6 +42,7 @@ set nocompatible " be iMproved
 
 " Vim formatting {{{
   set nowrap                        " Wrap long lines
+  set autoread
   set autoindent                    " Indent at the same level of the previous line
   set shiftwidth=2                  " Use indents of 2 spaces
   set expandtab                     " Tabs are spaces, not tabs
@@ -54,7 +57,7 @@ set nocompatible " be iMproved
 
 " Vim UI {{{
   set background=dark   " Assume a dark background
-  colorscheme Tomorrow-Night-Bright
+  colorscheme slate
   syntax on
   set tabpagemax=15         " Only show 15 tabs
   set showmode              " Display the current mode
@@ -81,6 +84,7 @@ set nocompatible " be iMproved
 
   set backspace=2                   " Backspace deletes like most programs in insert mode
   set linespace=0                   " No extra spaces between rows
+  set relativenumber                " Use hybrib line numbering
   set number                        " Line numbers on
   set numberwidth=5                 " Number column 5 characters wide
   set showmatch                     " Show matching brackets/parenthesis
@@ -129,7 +133,7 @@ set nocompatible " be iMproved
   nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 
   " bind \ (backward slash) to grep shortcut
-  command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
+  "command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
   nnoremap \ :Ag<SPACE>
 
   " Yank from the cursor to the end of the line
@@ -145,7 +149,7 @@ set nocompatible " be iMproved
   map <Leader>/ <plug>NERDCommenterToggle
 
   " Turn off highlighting
-  map <C-h> :nohl<cr>
+  map <Leader><SPACE> :nohl<cr>
 
   " Open a new tab
   map <C-t> <esc>:tabnew<CR>
@@ -189,6 +193,11 @@ set nocompatible " be iMproved
     nmap <leader>f9 :set foldlevel=9<CR>
   "}}}
 
+  " Spliting {{{
+    map <leader>vs :vsplit<cr>
+    map <leader>s :split<cr>
+  "}}}
+
   " Snippets are activated by Shift+Tab
   let g:snippetsEmu_key = "<S-Tab>"
 
@@ -198,7 +207,6 @@ set nocompatible " be iMproved
   " Index ctags from any project, including those outside Rails
   map <Leader>ct :!ctags -R .<CR>
 
-
   " Get off my lawn
   nnoremap <Left> :echoe "Use h"<CR>
   nnoremap <Right> :echoe "Use l"<CR>
@@ -206,20 +214,14 @@ set nocompatible " be iMproved
   nnoremap <Down> :echoe "Use j"<CR>
 
   " vim-rspec mappings
-  let g:rspec_command = "Dispatch bundle exec rspec {spec}"
-  nnoremap <Leader>rt :call RunCurrentSpecFile()<CR>
-  nnoremap <Leader>rs :call RunNearestSpec()<CR>
-  nnoremap <Leader>rl :call RunLastSpec()<CR>
-  nnoremap <Leader>ra :call RunAllSpecs()<CR>
+  "let g:rspec_command = 'call Send_to_Tmux("rspec {spec}\n")'
+  "nnoremap <Leader>rt :call RunCurrentSpecFile()<CR>
+  "nnoremap <Leader>rs :call RunNearestSpec()<CR>
+  "nnoremap <Leader>rl :call RunLastSpec()<CR>
+  "nnoremap <Leader>ra :call RunAllSpecs()<CR>
 
   " Treat <li> and <p> tags like the block tags they are
   let g:html_indent_tags = 'li\|p'
-
-  " Quicker window movement
-  "nnoremap <C-j> <C-w>j
-  "nnoremap <C-k> <C-w>k
-  "nnoremap <C-h> <C-w>h
-  "nnoremap <C-l> <C-w>l
 
   " configure syntastic syntax checking to check on open as well as save
   let g:syntastic_check_on_open=1
@@ -241,9 +243,10 @@ set nocompatible " be iMproved
   if executable('ag')
     " Use Ag over Grep
     set grepprg=ag\ --nogroup\ --nocolor
+    "let g:agprg='/usr/local/bin/ag'
 
     " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-    let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+    let g:ctrlp_user_command = 'ag %s -l -nocolor -g ""'
 
     " ag is fast enough that CtrlP doesn't need to cache
     let g:ctrlp_use_caching = 0
@@ -284,9 +287,6 @@ set nocompatible " be iMproved
     let g:pymode_lint_checker = "pyflakes"
     let g:pymode_utils_whitespaces = 0
     let g:pymode_options = 0
-  " }}}
-  " TagBar {{{
-    nnoremap <silent> <leader>tt :TagBarToggle<CR>
   " }}}
   " Fugitive {{{
     nnoremap <silent> <leader>gs :Gstatus<CR>
@@ -342,7 +342,7 @@ set nocompatible " be iMproved
     inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
     inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
     inoremap <expr><C-y>  neocomplete#close_popup()
-    "inoremap <expr><C-e>  neocomplete#cancel_popup()
+    inoremap <expr><C-e>  neocomplete#cancel_popup()
     " Close popup by <Space>.
     "inoremap <expr><Space> pumvisible() ? neocomplete#close_popup() : "\<Space>"
 
@@ -357,7 +357,7 @@ set nocompatible " be iMproved
     "let g:neocomplete#enable_insert_char_pre = 1
 
     " AutoComplPop like behavior.
-    let g:neocomplete#enable_auto_select = 1
+    "let g:neocomplete#enable_auto_select = 1
 
     " Shell like behavior(not recommended).
     "set completeopt+=longest
@@ -389,13 +389,14 @@ set nocompatible " be iMproved
     smap <C-k>     <Plug>(neosnippet_expand_or_jump)
     xmap <C-k>     <Plug>(neosnippet_expand_target)
 
+
     " SuperTab like snippets behavior.
-    imap <expr><TAB> neosnippet#jumpable() ?
-          \ "\<Plug>(neosnippet_jump)"
-          \: pumvisible() ? "\<C-n>" : "\<TAB>"
-    imap <expr><S-Tab> neosnippet#expandable() ?
-          \ "\<Plug>(neosnippet_expand)"
-          \: "\<Plug>(neosnippet_expand)"
+    imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+    \ "\<Plug>(neosnippet_expand_or_jump)"
+    \: pumvisible() ? "\<C-n>" : "\<TAB>"
+    smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+    \ "\<Plug>(neosnippet_expand_or_jump)"
+    \: "\<TAB>"
 
     " For snippet_complete marker.
     if has('conceal')
@@ -414,8 +415,11 @@ set nocompatible " be iMproved
     let g:gitgutter_realtime = 0
   "}}}
   " Ctrlp {{{
-    let g:ctrlp_by_filename = 1
+    "let g:ctrlp_by_filename = 1
 
+  "}}}
+  " NerdTree {{{
+    noremap <leader>t :NERDTreeToggle<cr>
   "}}}
 "}}}
 
@@ -452,3 +456,7 @@ set nocompatible " be iMproved
       \ endif
   " }}}
 " }}}
+runtime macros/matchit.vim
+" zoom a vim pane, or re-balance
+nnoremap <leader>- :wincmd _<cr>:wincmd \|<cr>
+nnoremap <leader>= :wincmd =<cr>
