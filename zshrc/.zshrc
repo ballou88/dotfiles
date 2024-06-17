@@ -27,7 +27,7 @@ alias cdi="zi"
 alias cat="bat"
 
 # eza a better ls 
-alias ls="eza --color=always --long --git --no-user --icons=always --no-permissions --no-time --no-filesize"
+# alias ls="eza --color=always --long --git --no-user --icons=always --no-permissions --no-time --no-filesize"
 
 # Git aliases
 alias g="git"
