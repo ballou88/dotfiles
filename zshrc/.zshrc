@@ -46,6 +46,7 @@ eval "$(starship init zsh)"
 export STARSHIP_CONFIG=~/.config/starship/starship.toml
 . /opt/homebrew/opt/asdf/libexec/asdf.sh
 eval "$(zoxide init zsh)"
+bindkey -e
 
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
