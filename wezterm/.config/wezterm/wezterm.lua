@@ -11,7 +11,7 @@ config.color_scheme = "Catppuccin Macchiato"
 config.window_decorations = "RESIZE"
 config.enable_tab_bar = false
 config.font = wezterm.font_with_fallback({
-	"JetBrains Mono",
+	"JetBrainsMono Nerd Font",
 	"Noto Sans Symbols 2",
 })
 -- and finally, return the configuration to wezterm

@@ -17,7 +17,6 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 source "$HOME/.cargo/env"
-eval "$(rbenv init - zsh)"
 
 # zoxide
 alias cd="z"
@@ -38,9 +37,13 @@ alias gd="git diff"
 alias gco="git checkout"
 alias gp="git push"
 alias gl="git pull"
+alias glg="git log --graph --oneline --all"
 alias gcm="git commit -m"
 alias gaa="git add -A"
 
+# Custom Neovims aliases
+alias v='nvim'
+alias vk='NVIM_APPNAME=nvim-kickstart nvim'
 source <(fzf --zsh)
 eval "$(starship init zsh)"
 export STARSHIP_CONFIG=~/.config/starship/starship.toml
@@ -50,3 +53,4 @@ bindkey -e
 
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+export PATH=$PATH:$HOME/go/bin
