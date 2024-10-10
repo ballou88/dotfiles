@@ -3,25 +3,25 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
-    nix-darwin.url = "github:LnL7/nix-darwin";
-    nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
-    nix-homebrew.url = "github:zhaofengli-wip/nix-homebrew";
+    darwin.url = "github:LnL7/nix-darwin";
+    darwin.inputs.nixpkgs.follows = "nixpkgs";
+    homebrew.url = "github:zhaofengli-wip/nix-homebrew";
 
     home-manager = {
       url = "github:nix-community/home-manager/release-24.05";
       # The `follows` keyword in inputs is used for inheritance.
       # Here, `inputs.nixpkgs` of home-manager is kept consistent with the `inputs.nixpkgs` of the current flake,
       # to avoid problems caused by different versions of nixpkgs dependencies.
-      inputs.nixpkgs.follows = "nix-darwin"; 
+      inputs.nixpkgs.follows = "darwin"; 
     };
 
   };
 
   outputs = inputs@{ 
     self,
-    nix-darwin,
+    darwin,
     nixpkgs,
-    nix-homebrew,
+    homebrew,
     home-manager,
     ...
     }: let
@@ -36,7 +36,7 @@
           inherit username useremail hostname;
         };
   in {
-    darwinConfigurations."${hostname}" = nix-darwin.lib.darwinSystem {
+    darwinConfigurations."${hostname}" = darwin.lib.darwinSystem {
       inherit system specialArgs;
       modules = [ 
         ./modules/nix-core.nix
@@ -55,7 +55,7 @@
         }
 
         # Homebrew
-        nix-homebrew.darwinModules.nix-homebrew
+        homebrew.darwinModules.nix-homebrew
         {
           nix-homebrew = {
             # Install Homebrew under the default prefix
