@@ -45,13 +45,13 @@
         ./modules/host-user.nix
 
         # Home Manager
-        # home-manager.darwinModules.home-manager
-        # {
-        #   home-manager.useGlobalPkgs = true;
-        #   home-manager.useUserPackages = true;
-        #   home-manager.extraSpecialArgs = specialArgs;
-        #   home-manager.users.${username} = import ./home;
-        # }
+        home-manager.darwinModules.home-manager
+        {
+          home-manager.useGlobalPkgs = true;
+          home-manager.useUserPackages = true;
+          home-manager.extraSpecialArgs = specialArgs;
+          home-manager.users.${username} = import ./home;
+        }
 
         # Homebrew
         nix-homebrew.darwinModules.nix-homebrew
