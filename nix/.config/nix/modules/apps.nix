@@ -15,14 +15,24 @@
   # But on macOS, it's less stable than homebrew.
   #
   # Related Discussion: https://discourse.nixos.org/t/darwin-again/29331
+  
   environment.systemPackages = with pkgs; [
+    curl
+    docker
     git
+    just
     neovim
-    wezterm
-    tmux
     obsidian
     slack
+    tmux
+    wezterm
     zoom-us
+  ];
+
+  environment.variables.EDITOR = "nvim";
+
+  fonts.packages = with pkgs; [
+    nerdfonts
   ];
 
   # TODO To make this work, homebrew need to be installed manually, see https://brew.sh
@@ -34,8 +44,18 @@
 
     onActivation = {
       autoUpdate = true;
+      upgrade = true;
       # 'zap': uninstalls all formulae(and related files) not listed here.
       # cleanup = "zap";
+    };
+
+    masApps = {
+        Xcode = 497799835;
+        Ampethamine = 937984704;
+        Mela = 1568924476;
+        NextDNS = 1464122853;
+        Stoic = 1312926037;
+        Tailscale = 1475387142;
     };
 
     taps = [
@@ -45,7 +65,8 @@
     # `brew install`
     # TODO Feel free to add your favorite apps here.
     brews = [
-      # "aria2"  # download tool
+      "wget"
+      "httpie"
     ];
 
     # `brew install --cask`
@@ -56,6 +77,9 @@
         "arc"
         "aerospace"
         "backblaze"
+        "chatgpt"
+        "discord"
+        "firefox"
         "google-chrome"
         "halloy"
         "iina"
@@ -70,13 +94,6 @@
         "stats"
         "the-unarchiver"
         "visual-studio-code"
-        masApps = {
-            "Ampethamine" = 937984704;
-            "Mela" = 1568924476;
-            "NextDNS" = 1464122853;
-            "Stoic" = 1312926037;
-            "Tailscale" = 1475387142;
-        };
     ];
   };
 }
