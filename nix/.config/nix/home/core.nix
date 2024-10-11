@@ -5,6 +5,8 @@
     xz
     unzip
     p7zip
+    bat
+    just
 
     # utils
     ripgrep # recursively searches directories for a regex pattern
