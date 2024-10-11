@@ -21,6 +21,7 @@
     docker
     git
     just
+    karabiner-elements
     neovim
     obsidian
     slack
