@@ -43,7 +43,7 @@
     ".config/bat".source = ../../bat;
     ".config/starship".source = ../../starship;
     ".config/aerospace".source = ../../aerospace;
-    # ".config/skhd".source = ../../skhd;
+    "tmux".source = ../../tmux/;
   };
 
   programs = {
