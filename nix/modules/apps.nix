@@ -17,6 +17,7 @@
   # Related Discussion: https://discourse.nixos.org/t/darwin-again/29331
   
   environment.systemPackages = with pkgs; [
+    coreutils-full
     curl
     docker
     git
@@ -28,6 +29,9 @@
     tmux
     wezterm
     zoom-us
+    zsh-autocomplete
+    zsh-autosuggestions
+    zsh-completions
   ];
 
   environment.variables.EDITOR = "nvim";

@@ -38,7 +38,7 @@
   ];
 
   home.file = {
-    ".zshrc".source = ../../zshrc/.zshrc;
+    # ".zshrc".source = ../../zshrc/.zshrc;
     ".config/wezterm".source = ../../wezterm;
     ".config/bat".source = ../../bat;
     ".config/starship".source = ../../starship;

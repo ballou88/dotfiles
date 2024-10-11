@@ -19,8 +19,8 @@ export NVM_DIR="$HOME/.nvm"
 source "$HOME/.cargo/env"
 
 # zoxide
-# alias cd="z"
-# alias cdi="zi"
+alias cd="z"
+alias cdi="zi"
 
 # bat a better cat
 alias cat="bat"
