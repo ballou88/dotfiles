@@ -7,6 +7,7 @@
     p7zip
     bat
     just
+    zoxide
 
     # utils
     ripgrep # recursively searches directories for a regex pattern
@@ -35,6 +36,15 @@
     # productivity
     glow # markdown previewer in terminal
   ];
+
+  home.file = {
+    ".zshrc".source = ../../zshrc/.zshrc;
+    ".config/wezterm".source = ../../wezterm;
+    ".config/bat".source = ../../bat;
+    ".config/starship".source = ../../starship;
+    ".config/aerospace".source = ../../aerospace;
+    # ".config/skhd".source = ../../skhd;
+  };
 
   programs = {
     # modern vim

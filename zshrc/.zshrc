@@ -19,8 +19,8 @@ export NVM_DIR="$HOME/.nvm"
 source "$HOME/.cargo/env"
 
 # zoxide
-alias cd="z"
-alias cdi="zi"
+# alias cd="z"
+# alias cdi="zi"
 
 # bat a better cat
 alias cat="bat"
@@ -47,10 +47,11 @@ alias vk='NVIM_APPNAME=nvim-kickstart nvim'
 source <(fzf --zsh)
 eval "$(starship init zsh)"
 export STARSHIP_CONFIG=~/.config/starship/starship.toml
-. /opt/homebrew/opt/asdf/libexec/asdf.sh
+# . /opt/homebrew/opt/asdf/libexec/asdf.sh
 eval "$(zoxide init zsh)"
 bindkey -e
 
-source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+# source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 export PATH=$PATH:$HOME/go/bin
+export PATH="/opt/homebrew/bin:$PATH"
