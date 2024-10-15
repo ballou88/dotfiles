@@ -41,6 +41,7 @@
   home.file = {
     # ".zshrc".source = ../../zshrc/.zshrc;
     ".config/wezterm".source = ../../wezterm;
+    ".config/nvim".source = ../../nvim;
     ".config/bat".source = ../../bat;
     ".config/starship".source = ../../starship;
     ".config/aerospace".source = ../../aerospace;

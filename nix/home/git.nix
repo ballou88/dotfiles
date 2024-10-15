@@ -2,6 +2,7 @@
   lib,
   username,
   useremail,
+  catppuccin,
   ...
 }: {
   # `programs.git` will generate the config file: ~/.config/git/config
@@ -40,6 +41,8 @@
 
     delta = {
       enable = true;
+      catppuccin.enable = true;
+      catppuccin.flavor = "macchiato";
       options = {
         features = "side-by-side";
       };
