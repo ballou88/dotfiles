@@ -32,6 +32,7 @@
     zstd
     caddy
     gnupg
+    neofetch
 
     # productivity
     glow # markdown previewer in terminal

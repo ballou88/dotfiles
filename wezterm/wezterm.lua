@@ -5,8 +5,7 @@ local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 
 -- This is where you actually apply your config choices
--- config.front_end = "WebGpu"
--- config.enable_wayland = false
+config.front_end = "WebGpu"
 
 -- For example, changing the color scheme:
 config.color_scheme = "Catppuccin Macchiato"
