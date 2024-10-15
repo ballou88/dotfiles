@@ -43,9 +43,8 @@
       enable = true;
       catppuccin.enable = true;
       catppuccin.flavor = "macchiato";
-      options = {
-        features = "side-by-side";
-      };
+      # options.features = "side-by-side";
+      # side-by-side = true;
     };
 
     aliases = {
