@@ -5,6 +5,8 @@
     enableBashIntegration = true;
     enableZshIntegration = true;
     enableNushellIntegration = true;
+    catppuccin.enable = true;
+    catppuccin.flavor = "macchiato";
 
     settings = {
       character = {

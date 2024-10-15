@@ -6,6 +6,7 @@
     darwin.url = "github:LnL7/nix-darwin";
     darwin.inputs.nixpkgs.follows = "nixpkgs";
     homebrew.url = "github:zhaofengli-wip/nix-homebrew";
+    catppuccin.url = "github:catppuccin/nix";
 
     home-manager = {
       url = "github:nix-community/home-manager/master";
@@ -23,6 +24,7 @@
     nixpkgs,
     homebrew,
     home-manager,
+    catppuccin,
     ...
     }: let
     username = "robertballou";

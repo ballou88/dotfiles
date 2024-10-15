@@ -1,4 +1,4 @@
-{ username, ... }:
+{ username, catppuccin, ... }:
 
 {
   # import sub modules
@@ -7,6 +7,7 @@
     ./core.nix
     ./git.nix
     ./starship.nix
+    catppuccin.homeManagerModules.catppuccin
   ];
 
   # Home Manager needs a bit of information about you and the
