@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{pkgs, catppuccin, ...}: {
   home.packages = with pkgs; [
     # archives
     zip
@@ -8,6 +8,7 @@
     bat
     just
     zoxide
+    fd
 
     # utils
     ripgrep # recursively searches directories for a regex pattern
@@ -70,6 +71,8 @@
     yazi = {
       enable = true;
       enableZshIntegration = true;
+      catppuccin.enable = true;
+      catppuccin.flavor = "macchiato";
       settings = {
         manager = {
           show_hidden = true;
@@ -83,6 +86,14 @@
     skim = {
       enable = true;
       enableBashIntegration = true;
+      catppuccin.enable = true;
+      catppuccin.flavor = "macchiato";
     };
+
+    lazygit = {
+        enable = true;
+        catppuccin.enable = true;
+        catppuccin.flavor = "macchiato";
+      };
   };
 }

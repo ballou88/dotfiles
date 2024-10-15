@@ -1,10 +1,12 @@
-{...}: {
+{catppuccin, ...}: {
   programs = {
     zsh = {
       enable = true;
       enableCompletion = true;
       autosuggestion.enable = true;
       syntaxHighlighting.enable = true;
+      syntaxHighlighting.catppuccin.enable = true;
+      syntaxHighlighting.catppuccin.flavor = "macchiato";
       initExtra = ''
         export PATH="$PATH:$HOME/bin:$HOME/.local/bin:$HOME/go/bin"
         '';
