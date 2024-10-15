@@ -27,7 +27,6 @@
     obsidian
     slack
     tmux
-    wezterm
     zoom-us
     zsh-autocomplete
     zsh-autosuggestions
@@ -95,6 +94,7 @@
         "stats"
         "the-unarchiver"
         "visual-studio-code"
+        "wezterm"
     ];
   };
 }
