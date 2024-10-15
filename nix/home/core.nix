@@ -44,7 +44,6 @@
     ".config/wezterm".source = ../../wezterm;
     ".config/nvim".source = ../../nvim;
     ".config/bat".source = ../../bat;
-    ".config/starship".source = ../../starship;
     ".config/aerospace".source = ../../aerospace;
     "tmux".source = ../../tmux;
     ".tmux.conf".source = ../../tmux/tmux.conf;
