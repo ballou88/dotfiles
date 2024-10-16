@@ -59,6 +59,7 @@
         Stoic = 1312926037;
         Tailscale = 1475387142;
         Fantastical = 975937182;
+        CardHop = 1290358394;
     };
 
     taps = [
