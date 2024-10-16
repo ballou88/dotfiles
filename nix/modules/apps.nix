@@ -58,6 +58,7 @@
         NextDNS = 1464122853;
         Stoic = 1312926037;
         Tailscale = 1475387142;
+        Fantastical = 975937182;
     };
 
     taps = [
@@ -86,7 +87,6 @@
         "halloy"
         "iina"
         "imageoptim"
-        "itsycal"
         "karabiner-elements"
         "keymapp"
         "raycast"
