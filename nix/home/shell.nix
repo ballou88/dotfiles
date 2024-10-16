@@ -24,11 +24,13 @@
     g="git";
     gst="git status -s";
     ga="git add";
+    gb="git branch";
     gc="git commit";
     gd="git diff";
-    gco="git checkout";
+    gco="git switch";
     gp="git push";
     gl="git pull";
+    gs="git switch -c";
     glg="git log --graph --oneline --all";
     gcm="git commit -m";
     gaa="git add -A";
