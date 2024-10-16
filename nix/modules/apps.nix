@@ -23,15 +23,25 @@
     git
     just
     karabiner-elements
+    lua
+    luajitPackages.luarocks
+    markdownlint-cli2
     neovim
+    nodejs_22
     obsidian
+    prettierd
+    ruby_3_3
     slack
     tmux
+    tree-sitter
     wezterm
+    vimPlugins.vim-markdown-toc
+    vimPlugins.vim-prettier
     zoom-us
     zsh-autocomplete
     zsh-autosuggestions
     zsh-completions
+    nodePackages.prettier
   ];
 
   environment.variables.EDITOR = "nvim";
