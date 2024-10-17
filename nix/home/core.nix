@@ -1,4 +1,5 @@
-{pkgs, catppuccin, ...}: {
+{ pkgs, catppuccin, ... }:
+{
   home.packages = with pkgs; [
     # archives
     zip
@@ -9,6 +10,7 @@
     just
     zoxide
     fd
+    nixfmt-rfc-style
 
     # utils
     ripgrep # recursively searches directories for a regex pattern
@@ -90,9 +92,9 @@
     };
 
     lazygit = {
-        enable = true;
-        catppuccin.enable = true;
-        catppuccin.flavor = "macchiato";
-      };
+      enable = true;
+      catppuccin.enable = true;
+      catppuccin.flavor = "macchiato";
+    };
   };
 }
