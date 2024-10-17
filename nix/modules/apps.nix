@@ -1,4 +1,5 @@
-{ pkgs, ...}: {
+{ pkgs, ... }:
+{
   ##########################################################################
   #
   #  Install all apps and packages here.
@@ -15,7 +16,7 @@
   # But on macOS, it's less stable than homebrew.
   #
   # Related Discussion: https://discourse.nixos.org/t/darwin-again/29331
-  
+
   environment.systemPackages = with pkgs; [
     coreutils-full
     curl
@@ -46,7 +47,6 @@
 
   environment.variables.EDITOR = "nvim";
 
-
   # TODO To make this work, homebrew need to be installed manually, see https://brew.sh
   #
   # The apps installed by homebrew are not managed by nix, and not reproducible!
@@ -62,14 +62,14 @@
     };
 
     masApps = {
-        Xcode = 497799835;
-        Ampethamine = 937984704;
-        Mela = 1568924476;
-        NextDNS = 1464122853;
-        Stoic = 1312926037;
-        Tailscale = 1475387142;
-        Fantastical = 975937182;
-        CardHop = 1290358394;
+      Xcode = 497799835;
+      Ampethamine = 937984704;
+      Mela = 1568924476;
+      NextDNS = 1464122853;
+      Stoic = 1312926037;
+      Tailscale = 1475387142;
+      Fantastical = 975937182;
+      CardHop = 1290358394;
     };
 
     taps = [
@@ -86,26 +86,26 @@
     # `brew install --cask`
     # TODO Feel free to add your favorite apps here.
     casks = [
-        "1password"
-        "1password-cli"
-        "arc"
-        "nikitabobko/tap/aerospace"
-        "backblaze"
-        "chatgpt"
-        "discord"
-        "firefox"
-        "google-chrome"
-        "halloy"
-        "iina"
-        "imageoptim"
-        "karabiner-elements"
-        "keymapp"
-        "raycast"
-        "sabnzbd"
-        "steam"
-        "stats"
-        "the-unarchiver"
-        "visual-studio-code"
+      "1password"
+      "1password-cli"
+      "arc"
+      "nikitabobko/tap/aerospace"
+      "backblaze"
+      "chatgpt"
+      "discord"
+      "firefox"
+      "google-chrome"
+      "halloy"
+      "iina"
+      "imageoptim"
+      "karabiner-elements"
+      "keymapp"
+      "raycast"
+      "sabnzbd"
+      "steam"
+      "stats"
+      "the-unarchiver"
+      "visual-studio-code"
     ];
   };
 }
