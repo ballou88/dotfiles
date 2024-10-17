@@ -81,6 +81,7 @@
     brews = [
       "wget"
       "httpie"
+      "codecrafters"
     ];
 
     # `brew install --cask`

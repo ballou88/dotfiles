@@ -1,4 +1,4 @@
-{ pkgs, catppuccin, ... }:
+{ pkgs, ... }:
 {
   home.packages = with pkgs; [
     # archives
@@ -7,10 +7,12 @@
     unzip
     p7zip
     bat
+    cargo
     just
     zoxide
     fd
     nixfmt-rfc-style
+    nil
 
     # utils
     ripgrep # recursively searches directories for a regex pattern
