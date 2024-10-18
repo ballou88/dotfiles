@@ -212,3 +212,7 @@ run = 'move-node-to-workspace B'
 [[on-window-detected]]
 if.app-id = 'com.flexibits.cardhop.mac'
 run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'com.mlobodzinski.Stoic'
+run = 'move-node-to-workspace N'
