@@ -13,6 +13,7 @@
     fd
     nixfmt-rfc-style
     nil
+    devenv
 
     # utils
     ripgrep # recursively searches directories for a regex pattern
