@@ -1,4 +1,4 @@
-{ catppuccin, ... }:
+{ ... }:
 {
   programs = {
     zsh = {
