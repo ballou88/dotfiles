@@ -9,7 +9,7 @@
       syntaxHighlighting.catppuccin.enable = true;
       syntaxHighlighting.catppuccin.flavor = "macchiato";
       initExtra = ''
-        export PATH="$PATH:$HOME/bin:$HOME/.local/bin:$HOME/go/bin"
+        export PATH="$PATH:$HOME/bin:$HOME/.local/bin:$HOME/go/bin:$HOME/.gem/ruby/3.3.0/bin "
       '';
     };
     direnv = {

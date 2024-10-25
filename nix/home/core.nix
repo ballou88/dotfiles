@@ -40,6 +40,15 @@
     gnupg
     neofetch
 
+    # LSPs
+    go
+    gopls
+    gotools
+    gofumpt
+    delve
+    rubyPackages_3_3.ruby-lsp
+    rust-analyzer
+
     # productivity
     glow # markdown previewer in terminal
   ];
@@ -56,11 +65,11 @@
 
   programs = {
     # modern vim
-    neovim = {
-      enable = true;
-      defaultEditor = true;
-      vimAlias = true;
-    };
+    # neovim = {
+    #   enable = true;
+    #   defaultEditor = true;
+    #   vimAlias = true;
+    # };
 
     # A modern replacement for ‘ls’
     # useful in bash/zsh prompt, not in nushell.
