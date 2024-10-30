@@ -9,7 +9,7 @@
       syntaxHighlighting.catppuccin.enable = true;
       syntaxHighlighting.catppuccin.flavor = "macchiato";
       initExtra = ''
-        export PATH="$PATH:$HOME/bin:$HOME/.local/bin:$HOME/go/bin:$HOME/.gem/ruby/3.3.0/bin "
+        export PATH="$PATH:$HOME/bin:$HOME/.local/bin:$HOME/go/bin"
       '';
     };
     direnv = {
@@ -21,6 +21,7 @@
   };
 
   home.shellAliases = {
+    nvim-kickstart = "NVIM_APPNAME='nvim-kickstart' nvim";
     k = "kubectl";
     g = "git";
     gst = "git status -s";

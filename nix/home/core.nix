@@ -48,6 +48,8 @@
     delve
     rubyPackages_3_3.ruby-lsp
     rust-analyzer
+    lua51Packages.lua
+    lua51Packages.luarocks
 
     # productivity
     glow # markdown previewer in terminal
