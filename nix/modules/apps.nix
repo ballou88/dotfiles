@@ -101,6 +101,7 @@
       "karabiner-elements"
       "keymapp"
       "raycast"
+      "reader"
       "sabnzbd"
       "steam"
       "stats"
