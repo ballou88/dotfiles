@@ -82,6 +82,7 @@
       "wget"
       "codecrafters"
       "exercism"
+      "roswell"
     ];
 
     # `brew install --cask`
