@@ -81,6 +81,7 @@
     brews = [
       "wget"
       "codecrafters"
+      "exercism"
     ];
 
     # `brew install --cask`
