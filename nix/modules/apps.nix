@@ -83,7 +83,6 @@
       "wget"
       "codecrafters"
       "exercism"
-      "roswell" # Common lisp
     ];
 
     # `brew install --cask`
