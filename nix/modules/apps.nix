@@ -20,6 +20,7 @@
   environment.systemPackages = with pkgs; [
     coreutils-full
     curl
+    devbox
     docker
     git
     just
@@ -82,7 +83,7 @@
       "wget"
       "codecrafters"
       "exercism"
-      "roswell"
+      "roswell" # Common lisp
     ];
 
     # `brew install --cask`
