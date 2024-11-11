@@ -71,6 +71,7 @@
       Tailscale = 1475387142;
       Fantastical = 975937182;
       CardHop = 1290358394;
+      Kindle = 302584613;
     };
 
     taps = [
