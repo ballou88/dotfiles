@@ -34,7 +34,6 @@
     prettierd
     ruby_3_3
     slack
-    sqlite
     tmux
     tree-sitter
     wezterm
@@ -107,6 +106,7 @@
       "raycast"
       "reader"
       "sabnzbd"
+      "sqlite"
       "steam"
       "stats"
       "the-unarchiver"
