@@ -84,6 +84,7 @@
       "wget"
       "codecrafters"
       "exercism"
+      "sqlite"
     ];
 
     # `brew install --cask`
@@ -106,7 +107,6 @@
       "raycast"
       "reader"
       "sabnzbd"
-      "sqlite"
       "steam"
       "stats"
       "the-unarchiver"
