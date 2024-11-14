@@ -35,7 +35,7 @@
     readline
     ruby_3_3
     slack
-    sqlite
+    sqlite-interactive
     tmux
     tree-sitter
     wezterm
