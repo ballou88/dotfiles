@@ -32,8 +32,10 @@
     nodejs_22
     obsidian
     prettierd
+    readline
     ruby_3_3
     slack
+    sqlite
     tmux
     tree-sitter
     wezterm
@@ -84,7 +86,6 @@
       "wget"
       "codecrafters"
       "exercism"
-      "sqlite"
     ];
 
     # `brew install --cask`
