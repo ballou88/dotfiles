@@ -35,6 +35,7 @@
     readline
     ruby_3_3
     slack
+    spotify
     sqlite-interactive
     tmux
     tree-sitter
