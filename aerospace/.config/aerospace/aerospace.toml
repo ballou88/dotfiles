@@ -54,10 +54,10 @@ on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
 [gaps]
 inner.horizontal = 5
 inner.vertical = 5
-outer.left = 5
-outer.bottom = 5
-outer.top = 5
-outer.right = 5
+outer.left = 15
+outer.bottom = 15
+outer.top = [{ monitor."built-in" = 15 }, { monitor."Gigabyte" = 45 }, 15]
+outer.right = 15
 
 
 # 'main' binding mode declaration

@@ -1,5 +1,5 @@
 FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
-export PATH="$HOME/Library/Python/3.9/bin:/opt/homebrew/opt/openjdk/bin:$PATH"
+export PATH="$HOME/Library/Python/3.9/bin:/opt/homebrew/opt/openjdk/bin:/usr/local/bin:$PATH"
 export PATH="$HOME/.luarocks/bin:$PATH"
 
 export EDITOR='nvim'
@@ -47,11 +47,14 @@ alias vk='NVIM_APPNAME=nvim-kickstart nvim'
 source <(fzf --zsh)
 eval "$(starship init zsh)"
 export STARSHIP_CONFIG=~/.config/starship/starship.toml
-# . /opt/homebrew/opt/asdf/libexec/asdf.sh
 eval "$(zoxide init zsh)"
 bindkey -e
+eval "$(direnv hook zsh)"
+
 
 # source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 # source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 export PATH=$PATH:$HOME/go/bin
 export PATH="/opt/homebrew/bin:$PATH"
+
+. /opt/homebrew/opt/asdf/libexec/asdf.sh
