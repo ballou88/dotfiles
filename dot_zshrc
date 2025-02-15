@@ -25,8 +25,13 @@ alias cdi="zi"
 # bat a better cat
 alias cat="bat"
 
-# eza a better ls 
-# alias ls="eza --color=always --long --git --no-user --icons=always --no-permissions --no-time --no-filesize"
+# VI Mode!!!
+bindkey jj vi-cmd-mode
+
+# Eza
+alias l="eza -l --icons --git -a"
+alias lt="eza --tree --level=2 --long --icons --git"
+alias ltree="eza --tree --level=2  --icons --git"
 
 # Git aliases
 alias g="git"
@@ -57,5 +62,6 @@ eval "$(direnv hook zsh)"
 export PATH=$PATH:$HOME/go/bin
 export PATH="/opt/homebrew/bin:$PATH"
 
-. /opt/homebrew/opt/asdf/libexec/asdf.sh
 eval "$(atuin init zsh)"
+export FPATH="/opt/homebrew/bin/eza/completions/zsh:$FPATH"
+eval "$(~/.local/bin/mise activate zsh)"
