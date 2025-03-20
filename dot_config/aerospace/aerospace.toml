@@ -56,7 +56,7 @@ inner.horizontal = 5
 inner.vertical = 5
 outer.left = 15
 outer.bottom = 15
-outer.top = [{ monitor."built-in" = 15 }, { monitor."Gigabyte" = 45 }, 15]
+outer.top = [{ monitor."built-in" = 15 }, { monitor."Gigabyte" = 5 }, 15]
 outer.right = 15
 
 

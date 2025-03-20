@@ -45,6 +45,7 @@ alias gl="git pull"
 alias glg="git log --graph --oneline --all"
 alias gcm="git commit -m"
 alias gaa="git add -A"
+alias lg="lazygit"
 
 # Custom Neovims aliases
 alias v='nvim'
