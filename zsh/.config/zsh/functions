@@ -1,13 +1,9 @@
-# Claude wrapper function
 function cc() {
-    local claude_path="$HOME/.claude/local/claude"
-    
-    # Check if claude executable exists
-    if [[ ! -x "$claude_path" ]]; then
-        echo "Error: Claude executable not found or not executable at $claude_path" >&2
+    # Check if claude command exists
+    if ! command -v claude &> /dev/null; then
+        echo "Error: claude command not found. Install with: npm install -g @anthropic-ai/claude" >&2
         return 1
     fi
     
-    # Run claude with the dangerous flag and pass all arguments
-    "$claude_path" --dangerously-skip-permissions "$@"
+    claude --dangerously-skip-permissions "$@"
 }
