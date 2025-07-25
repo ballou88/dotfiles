@@ -1,0 +1,7 @@
+FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+eval "$(starship init zsh)"
+# export STARSHIP_CONFIG=~/.config/starship/starship.toml
+eval "$(zoxide init zsh)"
+
+eval "$(direnv hook zsh)"
+eval "$(atuin init zsh)"

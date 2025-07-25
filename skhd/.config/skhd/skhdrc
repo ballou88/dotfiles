@@ -1,0 +1,7 @@
+alt - t : open -a 'Ghostty'
+alt - b : open -a 'Arc'
+alt - s : open -a 'Spotify'
+alt - n : open -a 'Obsidian'
+alt - m : open -a 'Spark Mail'
+alt - c : open -a 'Slack'
+
