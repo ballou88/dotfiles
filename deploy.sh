@@ -55,10 +55,9 @@ get_platform_packages() {
   done
 
   # Sort packages alphabetically
-  IFS=$'\n' sorted=($(sort <<<"${packages[*]}"))
-  unset IFS
+  mapfile -t sorted < <(printf '%s\n' "${packages[@]}" | sort)
 
-  echo "${sorted[@]}"
+  printf '%s\n' "${sorted[@]}"
 }
 
 # Get all available packages
@@ -69,10 +68,9 @@ get_all_packages() {
   done
 
   # Sort packages alphabetically
-  IFS=$'\n' sorted=($(sort <<<"${packages[*]}"))
-  unset IFS
+  mapfile -t sorted < <(printf '%s\n' "${packages[@]}" | sort)
 
-  echo "${sorted[@]}"
+  printf '%s\n' "${sorted[@]}"
 }
 
 print_usage() {
@@ -169,7 +167,7 @@ fi
 
 # Determine which packages to use
 if [[ "$USE_ALL" == true ]]; then
-  PACKAGES=($(get_platform_packages "$PLATFORM"))
+  mapfile -t PACKAGES < <(get_platform_packages "$PLATFORM")
 fi
 
 # Prerequisite checks
@@ -226,7 +224,7 @@ backup_configs() {
     # Find all files/dirs that would be stowed
     while IFS= read -r -d '' file; do
       # Get the relative path from package directory
-      rel_path="${file#$package/}"
+      rel_path="${file#"$package/"}"
       target="$HOME/$rel_path"
 
       # If target exists and is not a symlink, back it up
