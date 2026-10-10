@@ -1,0 +1,11 @@
+onboarding = false
+
+[ui]
+status_indicators = "symbols"
+
+[ui.toast]
+delivery = "system"
+
+[keys]
+# Match tmux (tmux/.tmux.conf sets prefix to C-a)
+prefix = "ctrl+a"

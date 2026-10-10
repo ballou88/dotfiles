@@ -30,6 +30,7 @@ declare -A PACKAGE_PLATFORMS=(
   ["atuin"]="linux macos"
   ["ghostty"]="linux macos"
   ["git"]="linux macos"
+  ["herdr"]="linux macos"
   ["hypr"]="linux"
   ["lazydocker"]="linux macos"
   ["lazygit"]="linux macos"

@@ -26,6 +26,8 @@ Personal dotfiles managed with **GNU Stow**, shared between macOS and Linux (Arc
 - **Each top-level directory is a stow package** whose contents mirror `$HOME`. For example, `nvim/.config/nvim/init.lua` becomes `~/.config/nvim/init.lua`. Edits made through the symlinked path change files in this repo directly.
 - **Platform gating** lives in the `PACKAGE_PLATFORMS` associative array in `deploy.sh` (`macos`, `linux`, or `all`). When you add a package, add it there too. Otherwise `--all` and `list` skip it.
   - macOS only: `aerospace`, `skhd`. Linux only: `hypr`, `omarchy`.
+- **Stow folding:** if a target directory doesn't exist yet, stow symlinks the whole directory instead of the individual files. Any runtime files the app then writes there land in this repo. `~/.config/herdr` holds sockets, logs and `session.json`, so it must exist as a real directory before `herdr` is stowed. Only `config.toml` should be a symlink.
+- **Prefix keys:** tmux and herdr both use `ctrl+a`, so keep their bindings in sync.
 - **Non-`.config` paths to keep in place:**
   - `aerospace/aerospace/aerospace.toml` → `~/aerospace/`
   - `tmux/tmux/tmux.reset.conf` → `~/tmux/`. `tmux/.tmux.conf` sources it as `~/tmux/tmux.reset.conf`.
