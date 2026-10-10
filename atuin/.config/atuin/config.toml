@@ -1,0 +1,15 @@
+# Atuin configuration
+# https://atuin.sh/docs/config/
+
+# Sync server settings
+# sync_address = "https://api.atuin.sh"
+# sync_frequency = "10m"
+
+# Local settings
+update_check = false
+search_mode = "fuzzy"
+filter_mode = "global"
+filter_mode_shell_up_key_binding = "session"
+style = "compact"
+inline_height = 10
+show_preview = true
