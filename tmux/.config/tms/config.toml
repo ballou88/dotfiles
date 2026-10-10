@@ -3,13 +3,17 @@ path = "~/Work"
 depth = 10
 
 [[search_dirs]]
-path = "/Users/robertballou/gumshoe"
+path = "~/code"
 depth = 10
 
 [[search_dirs]]
-path = "/Users/robertballou/projects"
+path = "~/gumshoe"
 depth = 10
 
 [[search_dirs]]
-path = "/Users/robertballou/learning"
+path = "~/projects"
+depth = 10
+
+[[search_dirs]]
+path = "~/learning"
 depth = 10
