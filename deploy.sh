@@ -37,6 +37,7 @@ declare -A PACKAGE_PLATFORMS=(
   ["omarchy"]="linux"
   ["skhd"]="macos"
   ["starship"]="all"
+  ["tms"]="linux macos"
   ["tmux"]="all"
   ["zsh"]="all"
 )
