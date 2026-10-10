@@ -5,3 +5,11 @@ depth = 10
 [[search_dirs]]
 path = "/Users/robertballou/gumshoe"
 depth = 10
+
+[[search_dirs]]
+path = "/Users/robertballou/projects"
+depth = 10
+
+[[search_dirs]]
+path = "/Users/robertballou/learning"
+depth = 10
