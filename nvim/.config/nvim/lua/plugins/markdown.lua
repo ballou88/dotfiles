@@ -3,7 +3,7 @@ return {
   opts = {},
   dependencies = {
     "nvim-treesitter/nvim-treesitter",
-    "echasnovski/mini.nvim",
+    "nvim-mini/mini.nvim",
     "nvim-tree/nvim-web-devicons",
   },
 }
