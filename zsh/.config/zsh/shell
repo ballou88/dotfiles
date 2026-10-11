@@ -2,4 +2,4 @@ PATH="$PATH":"$HOME/.local/scripts/"
 bindkey -s ^f "tmux-sessionizer\n"
 bindkey -e
 
-export PATH="$HOME/.local/bin:$HOME/.local/share/omarchy/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"

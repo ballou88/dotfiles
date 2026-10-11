@@ -31,15 +31,12 @@ declare -A PACKAGE_PLATFORMS=(
   ["ghostty"]="linux macos"
   ["git"]="linux macos"
   ["herdr"]="linux macos"
-  ["hypr"]="linux"
   ["lazydocker"]="linux macos"
   ["lazygit"]="linux macos"
   ["nvim"]="all"
-  ["omarchy"]="linux"
   ["skhd"]="macos"
   ["starship"]="all"
   ["tmux"]="all"
-  ["waybar"]="linux"
   ["zsh"]="all"
 )
 
